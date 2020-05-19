@@ -1,3 +1,5 @@
+# RuboCop の基本設定ファイル
+
 require: rubocop-performance
 
 ########################################

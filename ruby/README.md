@@ -1,12 +1,12 @@
-# Ruby on Rails 用 Linter/Formatter 設定
+# Ruby 用 Linter/Formatter 設定
 
 ## Linter/Formatter
 - RuboCop
 
-### Extensions
-- RuboCop Performance
-- RuboCop Rails
-- RuboCop RSpec
+### 設定ファイルのバリエーション
+- [Base](./rubocop/base.yml)
+- [Rails](./rubocop/rails.yml)
+- [RSpec](./rubocop/rspec.yml)
 
 ## 使い方
 ### 1. 必要なファイルを、プロジェクトのルートディレクトリに作成する
@@ -19,8 +19,8 @@
   group :development, :test do
     gem 'rubocop', '~> 0.83', require: false
     gem 'rubocop-performance', require: false
-    gem 'rubocop-rails', require: false
-    gem 'rubocop-rspec', require: false
+    gem 'rubocop-rails', require: false # Rails プロジェクトのみ
+    gem 'rubocop-rspec', require: false # テストに RSpec を利用するプロジェクトのみ
   end
   ```
 - .gitignore
@@ -28,15 +28,31 @@
   .rubocop-https-*
   ```
 - .rubocop.yml
-  ```yaml
-  inherit_from:
-    - https://raw.githubusercontent.com/timedia/styleguide/master/ruby-rails/.rubocop.yml
+  - Rails プロジェクトの場合
+    ```yaml
+    inherit_from:
+      - https://raw.githubusercontent.com/timedia/styleguide/master/ruby/rubocop/base.yml
+      - https://raw.githubusercontent.com/timedia/styleguide/master/ruby/rubocop/rails.yml
+      # 以下は RSpec 利用時のみ
+      - https://raw.githubusercontent.com/timedia/styleguide/master/ruby/rubocop/rspec.yml
 
-  AllCops:
-    TargetRubyVersion: 2.7
+    AllCops:
+      TargetRubyVersion: 2.7
 
-  # 必要な場合は、ここにプロジェクトごとのカスタム設定を書く
-  ```
+    # 必要な場合は、ここにプロジェクトごとのカスタム設定を書く
+    ```
+  - Rails を使っていないプロジェクトの場合
+    ```yaml
+    inherit_from:
+      - https://raw.githubusercontent.com/timedia/styleguide/master/ruby/rubocop/base.yml
+      # 以下は RSpec 利用時のみ
+      - https://raw.githubusercontent.com/timedia/styleguide/master/ruby/rubocop/rspec.yml
+
+    AllCops:
+      TargetRubyVersion: 2.7
+
+    # 必要な場合は、ここにプロジェクトごとのカスタム設定を書く
+    ```
 
 ### 2. RuboCop の実行
 ```sh
