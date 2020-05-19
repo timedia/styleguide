@@ -4,8 +4,6 @@ require:
   - rubocop-rspec
 
 AllCops:
-  # TargetRubyVersion: 2.7
-  NewCops: enable
   Exclude:
     - bin/**/*
     - config/*
@@ -18,15 +16,6 @@ AllCops:
 # Bundler Cops: Cops for Gemfile
 #   - Follow RuboCop's default style
 ########################################
-
-# Bundler/DuplicatedGem
-#   Enabled: true
-# Bundler/GemComment
-#   Enabled: false
-# Bundler/InsecureProtocolSource
-#   Enabled: true
-# Bundler/OrderedGems
-#   Enabled: true
 
 
 ########################################
