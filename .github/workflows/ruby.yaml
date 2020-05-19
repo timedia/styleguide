@@ -1,14 +1,14 @@
-name: Check .rubocop.yml for ruby-rails
+name: Check .rubocop.yml for ruby
 
 on:
   pull_request:
     paths:
-      - ruby-rails/**
+      - ruby/**
   push:
     branches:
       - master
     paths:
-      - ruby-rails/**
+      - ruby/**
 
 jobs:
   rubocop:
@@ -31,7 +31,7 @@ jobs:
 
       - name: Run bundle install
         run: gem install bundler && bundle install
-        working-directory: ./ruby-rails
+        working-directory: ./ruby
       - name: Run Rubocop
         run: bundle exec rubocop
-        working-directory: ./ruby-rails
+        working-directory: ./ruby
