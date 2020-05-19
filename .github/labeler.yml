@@ -1,0 +1,5 @@
+ruby-rails:
+  - ruby-rails/**
+
+others:
+  - '!ruby-rails/**'
