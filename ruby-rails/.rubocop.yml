@@ -1,0 +1,23 @@
+require:
+  - rubocop-performance
+  - rubocop-rails
+  - rubocop-rspec
+
+AllCops:
+  # TargetRubyVersion: 2.7
+  NewCops: enable
+  Exclude:
+    - bin/**/*
+    - config/*
+    - config/environments/*
+    - db/**/*
+    - node_modules/**/*
+    - vendor/**/*
+
+Rails:
+  Enabled: true
+
+Style/AsciiComments:
+  Enabled: false
+Style/Documentation:
+  Enabled: false
