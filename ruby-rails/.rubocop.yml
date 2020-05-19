@@ -13,8 +13,8 @@ AllCops:
     - vendor/**/*
 
 ########################################
-# Bundler Cops: Cops for Gemfile
-#   - Follow RuboCop's default style
+# Bundler Cops: Gemfile 用の設定
+#   - RuboCop のデフォルト設定に従う
 ########################################
 
 
