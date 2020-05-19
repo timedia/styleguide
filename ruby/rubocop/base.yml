@@ -1,17 +1,3 @@
-require:
-  - rubocop-performance
-  - rubocop-rails
-  - rubocop-rspec
-
-AllCops:
-  Exclude:
-    - bin/**/*
-    - config/*
-    - config/environments/*
-    - db/**/*
-    - node_modules/**/*
-    - vendor/**/*
-
 ########################################
 # Bundler Cops: Gemfile 用の設定
 #   - RuboCop のデフォルト設定に従う
@@ -40,24 +26,6 @@ AllCops:
 
 ########################################
 # Naming Cops: TODO
-########################################
-
-
-########################################
-# Performance Cops: TODO
-########################################
-
-
-########################################
-# Rails Cops: TODO
-########################################
-
-Rails:
-  Enabled: true
-
-
-########################################
-# RSpec Cops: TODO
 ########################################
 
 
