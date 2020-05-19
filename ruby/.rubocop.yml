@@ -2,6 +2,5 @@
 
 inherit_from:
   - rubocop/base.yml
-  - rubocop/performance.yml
   - rubocop/rails.yml
   - rubocop/rspec.yml
