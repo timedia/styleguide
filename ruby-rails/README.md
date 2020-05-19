@@ -1,15 +1,15 @@
-# Style for Ruby on Rails
+# Ruby on Rails 用 Linter/Formatter 設定
 
 ## Linter/Formatter
 - RuboCop
 
-### Using extensions
+### Extensions
 - RuboCop Performance
 - RuboCop Rails
 - RuboCop RSpec
 
-## How to use
-### 1. Create following files in project root
+## 使い方
+### 1. 必要なファイルを、プロジェクトのルートディレクトリに作成する
 - Gemfile
   ```ruby
   # frozen_string_literal: true
@@ -35,10 +35,10 @@
   AllCops:
     TargetRubyVersion: 2.7
 
-  # Customize cops for each project here.
+  # 必要な場合は、ここにプロジェクトごとのカスタム設定を書く
   ```
 
-### 2. Run RuboCop
+### 2. RuboCop の実行
 ```sh
 bundle install
 bundle exec rubocop
