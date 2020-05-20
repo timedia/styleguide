@@ -3,15 +3,6 @@
 
 require: rubocop-rails
 
-AllCops:
-  Exclude:
-    - bin/**/*
-    - config/*
-    - config/environments/*
-    - db/**/*
-    - node_modules/**/*
-    - vendor/**/*
-
 ########################################
 # Rails Cops: TODO
 ########################################

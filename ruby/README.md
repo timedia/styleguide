@@ -38,6 +38,13 @@
 
     AllCops:
       TargetRubyVersion: 2.7
+      Exclude:
+        - bin/**/*
+        - config/*
+        - config/environments/*
+        - db/**/*
+        - node_modules/**/*
+        - vendor/**/*
 
     # 必要な場合は、ここにプロジェクトごとのカスタム設定を書く
     ```
