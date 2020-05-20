@@ -179,32 +179,66 @@ Layout/TrailingWhitespace:
 # Metrics Cops: TODO
 ########################################
 
+#
+#
+#   RuboCop Docs:
+#
+
 
 ########################################
 # Migration Cops: TODO
 ########################################
+
+#
+#
+#   RuboCop Docs:
+#
 
 
 ########################################
 # Naming Cops: TODO
 ########################################
 
+#
+#
+#   RuboCop Docs:
+#
+
 
 ########################################
 # Performance Cops: TODO
 ########################################
+
+#
+#
+#   RuboCop Docs:
+#
 
 
 ########################################
 # Security Cops: TODO
 ########################################
 
+#
+#
+#   RuboCop Docs:
+#
+
 
 ########################################
 # Style Cops: TODO
 ########################################
 
+#
+#
+#   RuboCop Docs:
+#
 Style/AsciiComments:
   Enabled: false
+
+#
+#
+#   RuboCop Docs:
+#
 Style/Documentation:
   Enabled: false
