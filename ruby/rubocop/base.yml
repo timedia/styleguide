@@ -166,13 +166,41 @@ Layout/TrailingWhitespace:
 
 
 ########################################
-# Linting Cops: TODO
+# Linting Cops:
+#   - バグになりやすい書き方、Deprecated なメソッドの呼び出しなど→基本的に有効化する
 ########################################
 
+# 空の ensure 節は書かない
+#   - NOTE: AutoCorrect を有効化
 #
+#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_lint/#lintemptyensure
 #
-#   RuboCop Docs:
+Lint/EmptyEnsure:
+  AutoCorrect: true
+
+# Heredoc で定義したStringのメソッドを呼び出す際は、Heredocの開始よりも前に書く
 #
+#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_lint/#lintheredocmethodcallposition
+#
+Lint/HeredocMethodCallPosition:
+  Enabled: true
+
+# Exception クラスを直接継承しない
+#   - TODO: Exception の継承を見つけた場合、デフォルトだと RuntimeError を継承するよう提案される
+#     - StndardError と、どちらがよいだろうか
+#
+#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_lint/#lintinheritexception
+#
+Lint/InheritException:
+  EnforcedStyle: standard_error
+
+# Struct.newでStruct Classのbuilt-inメソッドを上書きしない
+#   - NOTE: from 0.81
+#
+#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_lint/#lintstructnewoverride
+#
+Lint/StructNewOverride:
+  Enabled: true
 
 
 ########################################
