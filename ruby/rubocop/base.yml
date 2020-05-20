@@ -9,13 +9,170 @@ require: rubocop-performance
 
 
 ########################################
-# Layout Cops: TODO
+# Layout Cops
 ########################################
+
+# end の位置は、Block の開始レベルに合わせるi
+#   - Block の Scope がわかりやすくなる
+#
+#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_layout/#layoutblockalignment
+#
+Layout/BlockAlignment:
+  EnforcedStyleAlignWith: start_of_block
+
+# クラス内の要素定義順を、Style Guide の推奨順に強制する
+#   - 迷いがちなので、強制されたほうが楽
+#
+#   Style Guide: https://rubystyle.guide/#classes-modules
+#   Docs: https://docs.rubocop.org/en/stable/cops_layout/#layoutclassstructure
+#
+Layout/ClassStructure:
+  Enabled: true
+
+# メソッド定義終了の end の位置は、def の開始レベルに合わせる
+#   - メソッドの Scope がわかりやすくなる
+#
+#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_layout/#layoutdefendalignment
+#
+Layout/DefEndAlignment:
+  AutoCorrect: true
+  EnforcedStyleAlignWith: def
+
+# AttributeAccessor の定義の前後には空行を入れる
+#   - NOTE: from 0.83
+#
+#   Style Guide: https://rubystyle.guide/#empty-lines-around-attribute-accessor
+#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_layout/#layoutemptylinesaroundattributeaccessor
+#
+Layout/EmptyLinesAroundAttributeAccessor:
+  Enabled: true
+
+# end の位置は、if,class などキーワードの開始レベルに合わせる
+#   - Scope がわかりやすくなる
+#   - NOTE: AutoCorrect を有効化
+#
+#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_layout/#layoutendalignment
+#
+Layout/EndAlignment:
+  AutoCorrect: true
+
+# 複数行の配列の第1要素の改行時のインデントは、1レベルのみ下げる：
+#   - 1行あたりの長さを抑えたい
+#   - Hashのルールに合わせる
+#
+#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_layout/#layoutfirstarrayelementindentation
+#
+Layout/FirstArrayElementIndentation:
+  EnforcedStyle: consistent
+
+# 複数行の配列の第1要素は必ず改行後に書く：
+#   - Hash、メソッド引数のルールに合わせる
+#
+#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_layout/#layoutfirstarrayelementlinebreak
+#
+Layout/FirstArrayElementLineBreak:
+  Enabled: true
+
+# 複数行のHashの第1要素の改行時のインデントは、1レベルのみ下げる：
+#   - 1行あたりの長さを抑えたい
+#   - 配列のルールに合わせる
+#
+#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_layout/#layoutfirsthashelementindentation
+#
+Layout/FirstHashElementIndentation:
+  EnforcedStyle: consistent
+
+# 複数行のHashの第1要素は必ず改行後に書く：
+#   - 配列、メソッド引数のルールに合わせる
+#
+#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_layout/#layoutfirsthashelementlinebreak
+#
+Layout/FirstHashElementLineBreak:
+  Enabled: true
+
+# メソッド引数が複数行に渡る場合、第1引数は必ず改行後に書く：
+#   - 配列、Hashのルールに合わせる
+#
+#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_layout/#layoutfirstmethodargumentlinebreak
+#
+Layout/FirstMethodArgumentLineBreak:
+  Enabled: true
+
+# メソッド引数の定義が複数行に渡る場合、第1引数は必ず改行後に書く：
+#   - 配列、Hashのルールに合わせる
+#
+#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_layout/#layoutfirstmethodparameterlinebreak
+#
+Layout/FirstMethodParameterLineBreak:
+  Enabled: true
+
+# HashのKey, Valueの揃え方：
+#   - Key, Value ともに頭を揃える
+#
+#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_layout/#layouthashalignment
+#
+Layout/HashAlignment:
+  EnforcedColonStyle: table
+  EnforcedHashRocketStyle: table
+
+# メソッド引数に Heredoc が含まれる場合、メソッド引数の閉じ括弧はHeredocの開始よりも前に書く
+#
+#   Style Guide: https://rubystyle.guide/#heredoc-argument-closing-parentheses
+#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_layout/#layoutheredocargumentclosingparenthesis
+#
+Layout/HeredocArgumentClosingParenthesis:
+  Enabled: true
+
+# TODO: 1 行あたりの最大文字数を100文字とする。
+#   - Style Guideでは80文字だが、80文字だと少し短いことが多い
+#
+#   Style Guide: https://rubystyle.guide/#80-character-limits
+#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_layout/#layoutlinelength
+#
+Layout/LineLength:
+  Max: 100
+
+# メソッド呼び出しを複数行に渡りChainする場合、メソッドの呼び出しはレシーバーよりインデントを1レベル下げる
+#   - インデントしない場合、行継続かどうかがパッと見でわかりづらい
+#
+#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_layout/#layoutmultilinemethodcallindentation
+#
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: indented_relative_to_receiver
+
+# if, return 等の引数を複数行に渡って書く場合、2行目以降のインデントを1レベル下げる
+#   - 同上
+#
+#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_layout/#layoutmultilineoperationindentation
+#
+Layout/MultilineOperationIndentation:
+  EnforcedStyle: indented
+
+# メソッド呼び出し時に、.とメソッド名の間にスペースを入れない
+#   - NOTE: from 0.82
+#
+#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_layout/#layoutspacearoundmethodcalloperator
+#
+Layout/SpaceAroundMethodCallOperator:
+  Enabled: true
+
+# 行末のスペースを許可しない
+#   - NOTE: Heredoc の中でも許可しない（Markdownなどを書くときは magic comment で個別に disable する）
+#
+#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_layout/#layouttrailingwhitespace
+#
+Layout/TrailingWhitespace:
+  AllowInHeredoc: false
 
 
 ########################################
 # Linting Cops: TODO
 ########################################
+
+#
+#
+#   RuboCop Docs:
+#
 
 
 ########################################
