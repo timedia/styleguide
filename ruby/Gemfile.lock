@@ -18,13 +18,16 @@ GEM
     rack (2.2.2)
     rainbow (3.0.0)
     rexml (3.2.4)
-    rubocop (0.83.0)
+    rubocop (0.84.0)
       parallel (~> 1.10)
       parser (>= 2.7.0.1)
       rainbow (>= 2.2.2, < 4.0)
       rexml
+      rubocop-ast (>= 0.0.3)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 1.4.0, < 2.0)
+    rubocop-ast (0.0.3)
+      parser (>= 2.7.0.1)
     rubocop-performance (1.6.0)
       rubocop (>= 0.71.0)
     rubocop-rails (2.5.2)
@@ -44,7 +47,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  rubocop (~> 0.83)
+  rubocop (~> 0.84)
   rubocop-performance
   rubocop-rails
   rubocop-rspec
