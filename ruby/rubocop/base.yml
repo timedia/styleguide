@@ -12,7 +12,7 @@ require: rubocop-performance
 # Layout Cops
 ########################################
 
-# end の位置は、Block の開始レベルに合わせるi
+# end の位置は、Block の開始レベルに合わせる
 #   - Block の Scope がわかりやすくなる
 #
 #   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_layout/#layoutblockalignment
@@ -123,14 +123,14 @@ Layout/HashAlignment:
 Layout/HeredocArgumentClosingParenthesis:
   Enabled: true
 
-# TODO: 1 行あたりの最大文字数を100文字とする。
-#   - Style Guideでは80文字だが、80文字だと少し短いことが多い
+# 1 行あたりの最大文字数を120文字とする。
+#   - RuboCop のデフォルト（> 0.84.0）に合わせる
 #
 #   Style Guide: https://rubystyle.guide/#80-character-limits
 #   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_layout/#layoutlinelength
 #
 Layout/LineLength:
-  Max: 100
+  Max: 120
 
 # メソッド呼び出しを複数行に渡りChainする場合、メソッドの呼び出しはレシーバーよりインデントを1レベル下げる
 #   - インデントしない場合、行継続かどうかがパッと見でわかりづらい
