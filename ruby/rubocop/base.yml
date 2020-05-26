@@ -315,13 +315,12 @@ Metrics/PerceivedComplexity:
 
 
 ########################################
-# Migration Cops: TODO
+# Migration Cops
+#   - rubocop.yml 内で Namespace なしの古い Cop 名が指定されていた場合に警告する
 ########################################
 
-#
-#
-#   RuboCop Docs:
-#
+Migration/DepartmentName:
+  Enabled: true
 
 
 ########################################
