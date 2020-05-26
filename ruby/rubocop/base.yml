@@ -204,13 +204,114 @@ Lint/StructNewOverride:
 
 
 ########################################
-# Metrics Cops: TODO
+# Metrics Cops
+#   - コードの複雑性を検知するための指標→基本的に有効化する
 ########################################
 
+# TODO: メソッドのABCサイズの最大は20とする
+#   - ABCSize とは
+#     - http://wiki.c2.com/?AbcMetric
+#     - https://en.wikipedia.org/wiki/ABC_Software_Metric
+#   - デフォルトの 15 は結構厳しいと RuboCop メンテナの koic さんも言ってる
+#     - https://koic.hatenablog.com/entry/default-value-of-metrics-abc-size-is-hard
 #
+#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_metrics/#metricsabcsize
 #
-#   RuboCop Docs:
+Metrics/AbcSize:
+  Enabled: true
+  Max: 20
+
+# Block の行数は25行までとする
+#   - RuboCop のデフォルトに従う
+#   - コメント行は含めない
+#   - Refinement, RSpec の describe は対象外とする
 #
+#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_metrics/#metricsblocklength
+#
+Metrics/BlockLength:
+  Enabled: true
+  CountComments: false
+  ExcludeMethods:
+    - describe
+    - refine
+  Max: 25
+
+# Block のネストは最大3段までとする
+#   - RuboCop のデフォルトに従う
+#
+#   Style Guide: https://rubystyle.guide/#three-is-the-number-thou-shalt-count
+#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_metrics/#metricsblocknesting
+#
+Metrics/BlockNesting:
+  Enabled: true
+  Max: 3
+
+# Class の行数は100行までとする
+#   - RuboCop のデフォルトに従う
+#     - TODO: Module への切り出しを推奨して、もう少しきつくしてもいいのではないか？
+#   - コメント行は含めない
+#
+#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_metrics/#metricsclasslength
+#
+Metrics/ClassLength:
+  Enabled: true
+  CountComments: false
+  Max: 100
+
+# メソッドの循環的複雑度の最大は6とする
+#   - RuboCop のデフォルトに従う
+#   - TODO: 軽くググった感じ、10以下であれば良さそうなのでもう少し緩める？
+#
+#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_metrics/#metricscyclomaticcomplexity
+#
+Metrics/CyclomaticComplexity:
+  Enabled: true
+  Max: 6
+
+# メソッドの行数は10行までとする
+#   - RuboCop のデフォルトに従う
+#   - コメント行は含めない
+#
+#   Style Guide: https://rubystyle.guide/#short-methods
+#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_metrics/#metricsmethodlength
+#
+Metrics/MethodLength:
+  Enabled: true
+  CountComments: false
+  Max: 10
+
+# Module の行数は100行までとする
+#   - RuboCop のデフォルトに従う
+#   - コメント行は含めない
+#
+#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_metrics/#metricsmodulelength
+#
+Metrics/ModuleLength:
+  Enabled: true
+  CountComments: false
+  Max: 100
+
+# メソッドの引数は5つまでとする
+#   - RuboCop のデフォルトに従う
+#     - TODO: Style Guide だと「多くても4つ」になってる
+#   - キーワード引数も含める
+#
+#   Style Guide: https://rubystyle.guide/#too-many-params
+#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_metrics/#metricsparameterlists
+#
+Metrics/ParameterLists:
+  Enabled: true
+  CountKeywordArgs: true
+  Max: 5
+
+# 見た目の複雑さ？スコアの最大は7とする
+#   - RuboCop のデフォルトに従う
+#
+#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_metrics/#metricsperceivedcomplexity
+#
+Metrics/PerceivedComplexity:
+  Enabled: true
+  Max: 7
 
 
 ########################################
