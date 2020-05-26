@@ -275,7 +275,6 @@ Naming/BlockParameterName:
 Naming/ClassAndModuleCamelCase:
   Enabled: true
 
-
 # Class/Module 名以外の定数は SCREAMENG_SNAKE_CASE で定義すること
 #
 #   Style Guide: https://rubystyle.guide/#screaming-snake-case
@@ -364,7 +363,7 @@ Naming/PredicateName:
 #
 #   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_naming/#namingrescuedexceptionsvariablename
 #
-Naming/RescuedExceptionsVariableName
+Naming/RescuedExceptionsVariableName:
   Enabled: true
   PreferredName: e
 
