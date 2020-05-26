@@ -216,13 +216,47 @@ Layout/TrailingWhitespace:
 
 
 ########################################
-# Security Cops: TODO
+# Security Cops
+#   - RuboCop のデフォルト設定通り、全て有効化する
 ########################################
 
+# Kernel#eval, Binding#eval の利用を禁止する
 #
+#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_security/#securityeval
 #
-#   RuboCop Docs:
+Security/Eval:
+  Enabled: true
+
+# JSON.load の利用を禁止する
+#   - JSON[] / JSON.parse のいずれかを利用すること
 #
+#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_security/#securityjsonload
+#
+Security/JSONLoad:
+  Enabled: true
+
+# Marshal.load の利用を禁止する
+#
+#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_security/#securitymarshalload
+#
+Security/MarshalLoad:
+  Enabled: true
+
+# Kernel#open の利用を禁止する
+#   - File.open / IO.popen などを利用すること
+#
+#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_security/#securityopen
+#
+Security/Open:
+  Enabled: true
+
+# YAML.load (Psych.load) の利用を禁止する
+#   - YAML.safe_load を利用すること
+#
+#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_security/#securityyamlload
+#
+Security/YAMLLoad:
+  Enabled: true
 
 
 ########################################
