@@ -224,14 +224,163 @@ Lint/StructNewOverride:
 
 
 ########################################
-# Naming Cops: TODO
+# Naming Cops
+#   - Class/Module/メソッド/変数などの命名規則
 ########################################
 
+# メソッド名の prefix に get/set を使わない
 #
+#   Style Guide: https://rubystyle.guide/#accessor_mutator_method_names
+#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_naming/#namingaccessormethodname
 #
-#   RuboCop Docs:
-#
+Naming/AccessorMethodName:
+  Enabled: true
 
+# メソッド名に多バイト文字を使わない
+#
+#   Style Guide: https://rubystyle.guide#english-identifiers
+#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_naming/#namingasciiidentifiers
+#
+Naming/AsciiIdentifiers:
+  Enabled: true
+
+# Klass#+() Klass#eql?() などを定義する際の引数の名前には `other` を利用する
+#
+#   Style Guide: https://rubystyle.guide/#other-arg
+#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_naming/#namingbinaryoperatorparametername
+#
+Naming/BinaryOperatorParameterName:
+  Enabled: true
+
+# Block パラメータの命名規則
+#   - 基本的に RuboCop のデフォルトに従う
+#     - ただしパラメータ名末尾に数字を使うことは許可しない
+#
+#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_naming/#namingblockparametername
+#
+Naming/BlockParameterName:
+  Enabled: true
+  AllowNamesEndingInNumbers: false
+  MinNameLength: 1
+
+# Class/Module 名は PascalCase (UpperCamelCase) で定義すること
+#
+#   Style Guide: https://rubystyle.guide/#camelcase-classes
+#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_naming/#namingclassandmodulecamelcase
+#
+Naming/ClassAndModuleCamelCase:
+  Enabled: true
+
+# Class/Module 名以外の定数は SCREAMENG_SNAKE_CASE で定義すること
+#
+#   Style Guide: https://rubystyle.guide/#screaming-snake-case
+#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_naming/#namingconstantname
+#
+Naming/ConstantName:
+  Enabled: true
+
+# ファイル名には snake_case を利用すること
+#
+#   Style Guide: https://rubystyle.guide/#snake-case-files
+#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_naming/#namingfilename
+#
+Naming/FileName:
+  Enabled: true
+
+# ヒアドキュメントのデリミタには UPPERCASE を利用すること
+#
+#   Style Guide: https://rubystyle.guide/#heredoc-delimiters
+#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_naming/#namingheredocdelimitercase
+#
+Naming/HeredocDelimiterCase:
+  Enabled: true
+  EnforcedStyle: uppercase
+
+# ヒアドキュメントのデリミタに、`END`, `EO*` を利用しないこと
+#   - RuboCop のデフォルトに従う
+#
+#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_naming/#namingheredocdelimiternaming
+#
+Naming/HeredocDelimiterNaming:
+  Enabled: true
+
+# メモ用インスタンス変数の名前とメソッド名は一致させること
+#   - ただしインスタンス変数側の prefix として `_` を使っても良い
+#   - e.g.1)
+#     ```
+#     def foo
+#       @foo ||= calculate_expensive_thing
+#     end
+#     ```
+#   - e.g.2)
+#     ```
+#     def foo
+#       @_foo ||= calculate_expensive_thing
+#     end
+#     ```
+#
+#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_naming/#namingmemoizedinstancevariablename
+#
+Naming/MemoizedInstanceVariableName:
+  Enabled: true
+  EnforcedStyleForLeadingUnderscores: optional
+
+# メソッド名は snake_case で定義すること
+#
+#   Style Guide: https://rubystyle.guide/#snake-case-symbols-methods-vars
+#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_naming/#namingmethodname
+#
+Naming/MethodName:
+  Enabled: true
+  EnforcedStyle: snake_case
+
+# メソッド引数の命名規則
+#   - RuboCop のデフォルトに従う
+#     - ただし引数名末尾に数字を使うことは許可しない
+#
+#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_naming/#namingmethodparametername
+#
+Naming/MethodParameterName:
+  Enabled: true
+  AllowNamesEndingInNumbers: false
+  MinNameLength: 3
+
+# 真偽値を返すメソッドの命名規則
+#   - `is_`, `has_`, `have_` といった prefix は使わない
+#   - Suffix として `?` を付与する
+#
+#   Style Guide: https://rubystyle.guide/#bool-methods-qmark
+#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_naming/#namingpredicatename
+#
+Naming/PredicateName:
+  Enabled: true
+
+# rescue した例外の、rescue 節内での変数名には e を利用する
+#   - RuboCop のデフォルトに従う
+#
+#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_naming/#namingrescuedexceptionsvariablename
+#
+Naming/RescuedExceptionsVariableName:
+  Enabled: true
+  PreferredName: e
+
+# 変数名は snake_case で定義すること
+#
+#   Style Guide: https://rubystyle.guide/#snake-case-symbols-methods-vars
+#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_naming/#namingvariablename
+#
+Naming/VariableName:
+  Enabled: true
+  EnforcedStyle: snake_case
+
+# 変数名に番号を付与する場合、その間に `_` を入れないこと
+#
+#   Style Guide: https://rubystyle.guide/#snake-case-symbols-methods-vars-with-numbers
+#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_naming/#namingvariablenumber
+#
+Naming/VariableNumber:
+  Enabled: true
+  EnforcedStyle: normalcase
 
 ########################################
 # Performance Cops: TODO
