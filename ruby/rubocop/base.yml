@@ -248,7 +248,6 @@ Metrics/BlockNesting:
 
 # Class の行数は100行までとする
 #   - RuboCop のデフォルトに従う
-#     - TODO: Module への切り出しを推奨して、もう少しきつくしてもいいのではないか？
 #   - コメント行は含めない
 #
 #   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_metrics/#metricsclasslength
@@ -260,7 +259,6 @@ Metrics/ClassLength:
 
 # メソッドの循環的複雑度の最大は6とする
 #   - RuboCop のデフォルトに従う
-#   - TODO: 軽くググった感じ、10以下であれば良さそうなのでもう少し緩める？
 #
 #   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_metrics/#metricscyclomaticcomplexity
 #
@@ -291,9 +289,8 @@ Metrics/ModuleLength:
   CountComments: false
   Max: 100
 
-# メソッドの引数は5つまでとする
-#   - RuboCop のデフォルトに従う
-#     - TODO: Style Guide だと「多くても4つ」になってる
+# メソッドの引数は4つまでとする
+#   - Style Guide に従う
 #   - キーワード引数も含める
 #
 #   Style Guide: https://rubystyle.guide/#too-many-params
@@ -302,7 +299,7 @@ Metrics/ModuleLength:
 Metrics/ParameterLists:
   Enabled: true
   CountKeywordArgs: true
-  Max: 5
+  Max: 4
 
 # 見た目の複雑さ？スコアの最大は7とする
 #   - RuboCop のデフォルトに従う
