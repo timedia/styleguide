@@ -253,18 +253,14 @@ Naming/BinaryOperatorParameterName:
   Enabled: true
 
 # Block パラメータの命名規則
-#   - RuboCop のデフォルトに従う
-#     - TODO:
-#       - 厳しくするなら、「`i`,`j` を除き変数名は3文字以上」とか？
-#         - 厳しくする必要はあるのか？
-#       - `AllowNamesEndingInNumbers` は無効にしてもいいように思う。
-#         - 使いたい場面が思いつかない。2.7 の Numbered parameter は定義不要だし。
+#   - 基本的に RuboCop のデフォルトに従う
+#     - ただしパラメータ名末尾に数字を使うことは許可しない
 #
 #   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_naming/#namingblockparametername
 #
 Naming/BlockParameterName:
   Enabled: true
-  AllowNamesEndingInNumbers: true
+  AllowNamesEndingInNumbers: false
   MinNameLength: 1
 
 # Class/Module 名は PascalCase (UpperCamelCase) で定義すること
@@ -340,12 +336,13 @@ Naming/MethodName:
 
 # メソッド引数の命名規則
 #   - RuboCop のデフォルトに従う
+#     - ただし引数名末尾に数字を使うことは許可しない
 #
 #   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_naming/#namingmethodparametername
 #
 Naming/MethodParameterName:
   Enabled: true
-  AllowNamesEndingInNumbers: true # TODO `AllowNamesEndingInNumbers` は無効にしてもいいように思う。
+  AllowNamesEndingInNumbers: false
   MinNameLength: 3
 
 # 真偽値を返すメソッドの命名規則
