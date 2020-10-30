@@ -231,8 +231,11 @@ Metrics/AbcSize:
 Metrics/BlockLength:
   Enabled: true
   CountComments: false
-  ExcludeMethods:
+  ExcludedMethods:
+    - class_methods
+    - concern
     - describe
+    - included
     - refine
   Max: 25
 
