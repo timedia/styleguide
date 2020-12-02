@@ -24,7 +24,7 @@ Layout/BlockAlignment:
 #   - 迷いがちなので、強制されたほうが楽
 #
 #   Style Guide: https://rubystyle.guide/#classes-modules
-#   Docs: https://docs.rubocop.org/rubocop/cops_layout.html#layoutclassstructure
+#   RuboCop Docs: https://docs.rubocop.org/rubocop/cops_layout.html#layoutclassstructure
 #
 Layout/ClassStructure:
   Enabled: true
