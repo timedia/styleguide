@@ -15,7 +15,7 @@ require: rubocop-performance
 # end の位置は、Block の開始レベルに合わせる
 #   - Block の Scope がわかりやすくなる
 #
-#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_layout/#layoutblockalignment
+#   RuboCop Docs: https://docs.rubocop.org/rubocop/cops_layout.html#layoutblockalignment
 #
 Layout/BlockAlignment:
   EnforcedStyleAlignWith: start_of_block
@@ -24,7 +24,7 @@ Layout/BlockAlignment:
 #   - 迷いがちなので、強制されたほうが楽
 #
 #   Style Guide: https://rubystyle.guide/#classes-modules
-#   Docs: https://docs.rubocop.org/en/stable/cops_layout/#layoutclassstructure
+#   RuboCop Docs: https://docs.rubocop.org/rubocop/cops_layout.html#layoutclassstructure
 #
 Layout/ClassStructure:
   Enabled: true
@@ -32,7 +32,7 @@ Layout/ClassStructure:
 # メソッド定義終了の end の位置は、def の開始レベルに合わせる
 #   - メソッドの Scope がわかりやすくなる
 #
-#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_layout/#layoutdefendalignment
+#   RuboCop Docs: https://docs.rubocop.org/rubocop/cops_layout.html#layoutdefendalignment
 #
 Layout/DefEndAlignment:
   AutoCorrect: true
@@ -42,7 +42,7 @@ Layout/DefEndAlignment:
 #   - NOTE: from 0.83
 #
 #   Style Guide: https://rubystyle.guide/#empty-lines-around-attribute-accessor
-#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_layout/#layoutemptylinesaroundattributeaccessor
+#   RuboCop Docs: https://docs.rubocop.org/rubocop/cops_layout.html#layoutemptylinesaroundattributeaccessor
 #
 Layout/EmptyLinesAroundAttributeAccessor:
   Enabled: true
@@ -51,7 +51,7 @@ Layout/EmptyLinesAroundAttributeAccessor:
 #   - Scope がわかりやすくなる
 #   - NOTE: AutoCorrect を有効化
 #
-#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_layout/#layoutendalignment
+#   RuboCop Docs: https://docs.rubocop.org/rubocop/cops_layout.html#layoutendalignment
 #
 Layout/EndAlignment:
   AutoCorrect: true
@@ -60,7 +60,7 @@ Layout/EndAlignment:
 #   - 1行あたりの長さを抑えたい
 #   - Hashのルールに合わせる
 #
-#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_layout/#layoutfirstarrayelementindentation
+#   RuboCop Docs: https://docs.rubocop.org/rubocop/cops_layout.html#layoutfirstarrayelementindentation
 #
 Layout/FirstArrayElementIndentation:
   EnforcedStyle: consistent
@@ -68,7 +68,7 @@ Layout/FirstArrayElementIndentation:
 # 複数行の配列の第1要素は必ず改行後に書く：
 #   - Hash、メソッド引数のルールに合わせる
 #
-#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_layout/#layoutfirstarrayelementlinebreak
+#   RuboCop Docs: https://docs.rubocop.org/rubocop/cops_layout.html#layoutfirstarrayelementlinebreak
 #
 Layout/FirstArrayElementLineBreak:
   Enabled: true
@@ -77,7 +77,7 @@ Layout/FirstArrayElementLineBreak:
 #   - 1行あたりの長さを抑えたい
 #   - 配列のルールに合わせる
 #
-#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_layout/#layoutfirsthashelementindentation
+#   RuboCop Docs: https://docs.rubocop.org/rubocop/cops_layout.html#layoutfirsthashelementindentation
 #
 Layout/FirstHashElementIndentation:
   EnforcedStyle: consistent
@@ -85,7 +85,7 @@ Layout/FirstHashElementIndentation:
 # 複数行のHashの第1要素は必ず改行後に書く：
 #   - 配列、メソッド引数のルールに合わせる
 #
-#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_layout/#layoutfirsthashelementlinebreak
+#   RuboCop Docs: https://docs.rubocop.org/rubocop/cops_layout.html#layoutfirsthashelementlinebreak
 #
 Layout/FirstHashElementLineBreak:
   Enabled: true
@@ -93,7 +93,7 @@ Layout/FirstHashElementLineBreak:
 # メソッド引数が複数行に渡る場合、第1引数は必ず改行後に書く：
 #   - 配列、Hashのルールに合わせる
 #
-#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_layout/#layoutfirstmethodargumentlinebreak
+#   RuboCop Docs: https://docs.rubocop.org/rubocop/cops_layout.html#layoutfirstmethodargumentlinebreak
 #
 Layout/FirstMethodArgumentLineBreak:
   Enabled: true
@@ -101,7 +101,7 @@ Layout/FirstMethodArgumentLineBreak:
 # メソッド引数の定義が複数行に渡る場合、第1引数は必ず改行後に書く：
 #   - 配列、Hashのルールに合わせる
 #
-#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_layout/#layoutfirstmethodparameterlinebreak
+#   RuboCop Docs: https://docs.rubocop.org/rubocop/cops_layout.html#layoutfirstmethodparameterlinebreak
 #
 Layout/FirstMethodParameterLineBreak:
   Enabled: true
@@ -109,7 +109,7 @@ Layout/FirstMethodParameterLineBreak:
 # HashのKey, Valueの揃え方：
 #   - Key, Value ともに頭を揃える
 #
-#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_layout/#layouthashalignment
+#   RuboCop Docs: https://docs.rubocop.org/rubocop/cops_layout.html#layouthashalignment
 #
 Layout/HashAlignment:
   EnforcedColonStyle: table
@@ -118,7 +118,7 @@ Layout/HashAlignment:
 # メソッド引数に Heredoc が含まれる場合、メソッド引数の閉じ括弧はHeredocの開始よりも前に書く
 #
 #   Style Guide: https://rubystyle.guide/#heredoc-argument-closing-parentheses
-#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_layout/#layoutheredocargumentclosingparenthesis
+#   RuboCop Docs: https://docs.rubocop.org/rubocop/cops_layout.html#layoutheredocargumentclosingparenthesis
 #
 Layout/HeredocArgumentClosingParenthesis:
   Enabled: true
@@ -127,7 +127,7 @@ Layout/HeredocArgumentClosingParenthesis:
 #   - RuboCop のデフォルト（> 0.84.0）に合わせる
 #
 #   Style Guide: https://rubystyle.guide/#80-character-limits
-#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_layout/#layoutlinelength
+#   RuboCop Docs: https://docs.rubocop.org/rubocop/cops_layout.html#layoutlinelength
 #
 Layout/LineLength:
   Max: 120
@@ -135,7 +135,7 @@ Layout/LineLength:
 # メソッド呼び出しを複数行に渡りChainする場合、メソッドの呼び出しはレシーバーよりインデントを1レベル下げる
 #   - インデントしない場合、行継続かどうかがパッと見でわかりづらい
 #
-#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_layout/#layoutmultilinemethodcallindentation
+#   RuboCop Docs: https://docs.rubocop.org/rubocop/cops_layout.html#layoutmultilinemethodcallindentation
 #
 Layout/MultilineMethodCallIndentation:
   EnforcedStyle: indented_relative_to_receiver
@@ -143,7 +143,7 @@ Layout/MultilineMethodCallIndentation:
 # if, return 等の引数を複数行に渡って書く場合、2行目以降のインデントを1レベル下げる
 #   - 同上
 #
-#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_layout/#layoutmultilineoperationindentation
+#   RuboCop Docs: https://docs.rubocop.org/rubocop/cops_layout.html#layoutmultilineoperationindentation
 #
 Layout/MultilineOperationIndentation:
   EnforcedStyle: indented
@@ -151,7 +151,7 @@ Layout/MultilineOperationIndentation:
 # メソッド呼び出し時に、.とメソッド名の間にスペースを入れない
 #   - NOTE: from 0.82
 #
-#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_layout/#layoutspacearoundmethodcalloperator
+#   RuboCop Docs: https://docs.rubocop.org/rubocop/cops_layout.html#layoutspacearoundmethodcalloperator
 #
 Layout/SpaceAroundMethodCallOperator:
   Enabled: true
@@ -159,7 +159,7 @@ Layout/SpaceAroundMethodCallOperator:
 # 行末のスペースを許可しない
 #   - NOTE: Heredoc の中でも許可しない（Markdownなどを書くときは magic comment で個別に disable する）
 #
-#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_layout/#layouttrailingwhitespace
+#   RuboCop Docs: https://docs.rubocop.org/rubocop/cops_layout.html#layouttrailingwhitespace
 #
 Layout/TrailingWhitespace:
   AllowInHeredoc: false
@@ -173,14 +173,14 @@ Layout/TrailingWhitespace:
 # 空の ensure 節は書かない
 #   - NOTE: AutoCorrect を有効化
 #
-#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_lint/#lintemptyensure
+#   RuboCop Docs: https://docs.rubocop.org/rubocop/cops_lint.html#lintemptyensure
 #
 Lint/EmptyEnsure:
   AutoCorrect: true
 
 # Heredoc で定義したStringのメソッドを呼び出す際は、Heredocの開始よりも前に書く
 #
-#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_lint/#lintheredocmethodcallposition
+#   RuboCop Docs: https://docs.rubocop.org/rubocop/cops_lint.html#lintheredocmethodcallposition
 #
 Lint/HeredocMethodCallPosition:
   Enabled: true
@@ -189,7 +189,7 @@ Lint/HeredocMethodCallPosition:
 #   - TODO: Exception の継承を見つけた場合、デフォルトだと RuntimeError を継承するよう提案される
 #     - StndardError と、どちらがよいだろうか
 #
-#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_lint/#lintinheritexception
+#   RuboCop Docs: https://docs.rubocop.org/rubocop/cops_lint.html#lintinheritexception
 #
 Lint/InheritException:
   EnforcedStyle: standard_error
@@ -197,7 +197,7 @@ Lint/InheritException:
 # Struct.newでStruct Classのbuilt-inメソッドを上書きしない
 #   - NOTE: from 0.81
 #
-#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_lint/#lintstructnewoverride
+#   RuboCop Docs: https://docs.rubocop.org/rubocop/cops_lint.html#lintstructnewoverride
 #
 Lint/StructNewOverride:
   Enabled: true
@@ -215,7 +215,7 @@ Lint/StructNewOverride:
 #   - デフォルトの 15 は結構厳しいと RuboCop メンテナの koic さんも言ってる
 #     - https://koic.hatenablog.com/entry/default-value-of-metrics-abc-size-is-hard
 #
-#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_metrics/#metricsabcsize
+#   RuboCop Docs: https://docs.rubocop.org/rubocop/cops_metrics.html#metricsabcsize
 #
 Metrics/AbcSize:
   Enabled: true
@@ -226,7 +226,7 @@ Metrics/AbcSize:
 #   - コメント行は含めない
 #   - Refinement, RSpec の describe は対象外とする
 #
-#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_metrics/#metricsblocklength
+#   RuboCop Docs: https://docs.rubocop.org/rubocop/cops_metrics.html#metricsblocklength
 #
 Metrics/BlockLength:
   Enabled: true
@@ -243,7 +243,7 @@ Metrics/BlockLength:
 #   - RuboCop のデフォルトに従う
 #
 #   Style Guide: https://rubystyle.guide/#three-is-the-number-thou-shalt-count
-#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_metrics/#metricsblocknesting
+#   RuboCop Docs: https://docs.rubocop.org/rubocop/cops_metrics.html#metricsblocknesting
 #
 Metrics/BlockNesting:
   Enabled: true
@@ -253,7 +253,7 @@ Metrics/BlockNesting:
 #   - RuboCop のデフォルトに従う
 #   - コメント行は含めない
 #
-#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_metrics/#metricsclasslength
+#   RuboCop Docs: https://docs.rubocop.org/rubocop/cops_metrics.html#metricsclasslength
 #
 Metrics/ClassLength:
   Enabled: true
@@ -263,7 +263,7 @@ Metrics/ClassLength:
 # メソッドの循環的複雑度の最大は6とする
 #   - RuboCop のデフォルトに従う
 #
-#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_metrics/#metricscyclomaticcomplexity
+#   RuboCop Docs: https://docs.rubocop.org/rubocop/cops_metrics.html#metricscyclomaticcomplexity
 #
 Metrics/CyclomaticComplexity:
   Enabled: true
@@ -274,7 +274,7 @@ Metrics/CyclomaticComplexity:
 #   - コメント行は含めない
 #
 #   Style Guide: https://rubystyle.guide/#short-methods
-#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_metrics/#metricsmethodlength
+#   RuboCop Docs: https://docs.rubocop.org/rubocop/cops_metrics.html#metricsmethodlength
 #
 Metrics/MethodLength:
   Enabled: true
@@ -285,7 +285,7 @@ Metrics/MethodLength:
 #   - RuboCop のデフォルトに従う
 #   - コメント行は含めない
 #
-#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_metrics/#metricsmodulelength
+#   RuboCop Docs: https://docs.rubocop.org/rubocop/cops_metrics.html#metricsmodulelength
 #
 Metrics/ModuleLength:
   Enabled: true
@@ -297,7 +297,7 @@ Metrics/ModuleLength:
 #   - キーワード引数も含める
 #
 #   Style Guide: https://rubystyle.guide/#too-many-params
-#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_metrics/#metricsparameterlists
+#   RuboCop Docs: https://docs.rubocop.org/rubocop/cops_metrics.html#metricsparameterlists
 #
 Metrics/ParameterLists:
   Enabled: true
@@ -307,7 +307,7 @@ Metrics/ParameterLists:
 # 見た目の複雑さ？スコアの最大は7とする
 #   - RuboCop のデフォルトに従う
 #
-#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_metrics/#metricsperceivedcomplexity
+#   RuboCop Docs: https://docs.rubocop.org/rubocop/cops_metrics.html#metricsperceivedcomplexity
 #
 Metrics/PerceivedComplexity:
   Enabled: true
@@ -331,7 +331,7 @@ Migration/DepartmentName:
 # メソッド名の prefix に get/set を使わない
 #
 #   Style Guide: https://rubystyle.guide/#accessor_mutator_method_names
-#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_naming/#namingaccessormethodname
+#   RuboCop Docs: https://docs.rubocop.org/rubocop/cops_naming.html#namingaccessormethodname
 #
 Naming/AccessorMethodName:
   Enabled: true
@@ -339,7 +339,7 @@ Naming/AccessorMethodName:
 # メソッド名に多バイト文字を使わない
 #
 #   Style Guide: https://rubystyle.guide#english-identifiers
-#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_naming/#namingasciiidentifiers
+#   RuboCop Docs: https://docs.rubocop.org/rubocop/cops_naming.html#namingasciiidentifiers
 #
 Naming/AsciiIdentifiers:
   Enabled: true
@@ -347,7 +347,7 @@ Naming/AsciiIdentifiers:
 # Klass#+() Klass#eql?() などを定義する際の引数の名前には `other` を利用する
 #
 #   Style Guide: https://rubystyle.guide/#other-arg
-#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_naming/#namingbinaryoperatorparametername
+#   RuboCop Docs: https://docs.rubocop.org/rubocop/cops_naming.html#namingbinaryoperatorparametername
 #
 Naming/BinaryOperatorParameterName:
   Enabled: true
@@ -356,7 +356,7 @@ Naming/BinaryOperatorParameterName:
 #   - 基本的に RuboCop のデフォルトに従う
 #     - ただしパラメータ名末尾に数字を使うことは許可しない
 #
-#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_naming/#namingblockparametername
+#   RuboCop Docs: https://docs.rubocop.org/rubocop/cops_naming.html#namingblockparametername
 #
 Naming/BlockParameterName:
   Enabled: true
@@ -366,7 +366,7 @@ Naming/BlockParameterName:
 # Class/Module 名は PascalCase (UpperCamelCase) で定義すること
 #
 #   Style Guide: https://rubystyle.guide/#camelcase-classes
-#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_naming/#namingclassandmodulecamelcase
+#   RuboCop Docs: https://docs.rubocop.org/rubocop/cops_naming.html#namingclassandmodulecamelcase
 #
 Naming/ClassAndModuleCamelCase:
   Enabled: true
@@ -374,7 +374,7 @@ Naming/ClassAndModuleCamelCase:
 # Class/Module 名以外の定数は SCREAMENG_SNAKE_CASE で定義すること
 #
 #   Style Guide: https://rubystyle.guide/#screaming-snake-case
-#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_naming/#namingconstantname
+#   RuboCop Docs: https://docs.rubocop.org/rubocop/cops_naming.html#namingconstantname
 #
 Naming/ConstantName:
   Enabled: true
@@ -382,7 +382,7 @@ Naming/ConstantName:
 # ファイル名には snake_case を利用すること
 #
 #   Style Guide: https://rubystyle.guide/#snake-case-files
-#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_naming/#namingfilename
+#   RuboCop Docs: https://docs.rubocop.org/rubocop/cops_naming.html#namingfilename
 #
 Naming/FileName:
   Enabled: true
@@ -390,7 +390,7 @@ Naming/FileName:
 # ヒアドキュメントのデリミタには UPPERCASE を利用すること
 #
 #   Style Guide: https://rubystyle.guide/#heredoc-delimiters
-#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_naming/#namingheredocdelimitercase
+#   RuboCop Docs: https://docs.rubocop.org/rubocop/cops_naming.html#namingheredocdelimitercase
 #
 Naming/HeredocDelimiterCase:
   Enabled: true
@@ -399,7 +399,7 @@ Naming/HeredocDelimiterCase:
 # ヒアドキュメントのデリミタに、`END`, `EO*` を利用しないこと
 #   - RuboCop のデフォルトに従う
 #
-#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_naming/#namingheredocdelimiternaming
+#   RuboCop Docs: https://docs.rubocop.org/rubocop/cops_naming.html#namingheredocdelimiternaming
 #
 Naming/HeredocDelimiterNaming:
   Enabled: true
@@ -419,7 +419,7 @@ Naming/HeredocDelimiterNaming:
 #     end
 #     ```
 #
-#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_naming/#namingmemoizedinstancevariablename
+#   RuboCop Docs: https://docs.rubocop.org/rubocop/cops_naming.html#namingmemoizedinstancevariablename
 #
 Naming/MemoizedInstanceVariableName:
   Enabled: true
@@ -428,7 +428,7 @@ Naming/MemoizedInstanceVariableName:
 # メソッド名は snake_case で定義すること
 #
 #   Style Guide: https://rubystyle.guide/#snake-case-symbols-methods-vars
-#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_naming/#namingmethodname
+#   RuboCop Docs: https://docs.rubocop.org/rubocop/cops_naming.html#namingmethodname
 #
 Naming/MethodName:
   Enabled: true
@@ -438,7 +438,7 @@ Naming/MethodName:
 #   - RuboCop のデフォルトに従う
 #     - ただし引数名末尾に数字を使うことは許可しない
 #
-#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_naming/#namingmethodparametername
+#   RuboCop Docs: https://docs.rubocop.org/rubocop/cops_naming.html#namingmethodparametername
 #
 Naming/MethodParameterName:
   Enabled: true
@@ -450,7 +450,7 @@ Naming/MethodParameterName:
 #   - Suffix として `?` を付与する
 #
 #   Style Guide: https://rubystyle.guide/#bool-methods-qmark
-#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_naming/#namingpredicatename
+#   RuboCop Docs: https://docs.rubocop.org/rubocop/cops_naming.html#namingpredicatename
 #
 Naming/PredicateName:
   Enabled: true
@@ -458,7 +458,7 @@ Naming/PredicateName:
 # rescue した例外の、rescue 節内での変数名には e を利用する
 #   - RuboCop のデフォルトに従う
 #
-#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_naming/#namingrescuedexceptionsvariablename
+#   RuboCop Docs: https://docs.rubocop.org/rubocop/cops_naming.html#namingrescuedexceptionsvariablename
 #
 Naming/RescuedExceptionsVariableName:
   Enabled: true
@@ -467,7 +467,7 @@ Naming/RescuedExceptionsVariableName:
 # 変数名は snake_case で定義すること
 #
 #   Style Guide: https://rubystyle.guide/#snake-case-symbols-methods-vars
-#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_naming/#namingvariablename
+#   RuboCop Docs: https://docs.rubocop.org/rubocop/cops_naming.html#namingvariablename
 #
 Naming/VariableName:
   Enabled: true
@@ -476,7 +476,7 @@ Naming/VariableName:
 # 変数名に番号を付与する場合、その間に `_` を入れないこと
 #
 #   Style Guide: https://rubystyle.guide/#snake-case-symbols-methods-vars-with-numbers
-#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_naming/#namingvariablenumber
+#   RuboCop Docs: https://docs.rubocop.org/rubocop/cops_naming.html#namingvariablenumber
 #
 Naming/VariableNumber:
   Enabled: true
@@ -499,7 +499,7 @@ Naming/VariableNumber:
 
 # Kernel#eval, Binding#eval の利用を禁止する
 #
-#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_security/#securityeval
+#   RuboCop Docs: https://docs.rubocop.org/rubocop/cops_security.html#securityeval
 #
 Security/Eval:
   Enabled: true
@@ -507,14 +507,14 @@ Security/Eval:
 # JSON.load の利用を禁止する
 #   - JSON[] / JSON.parse のいずれかを利用すること
 #
-#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_security/#securityjsonload
+#   RuboCop Docs: https://docs.rubocop.org/rubocop/cops_security.html#securityjsonload
 #
 Security/JSONLoad:
   Enabled: true
 
 # Marshal.load の利用を禁止する
 #
-#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_security/#securitymarshalload
+#   RuboCop Docs: https://docs.rubocop.org/rubocop/cops_security.html#securitymarshalload
 #
 Security/MarshalLoad:
   Enabled: true
@@ -522,7 +522,7 @@ Security/MarshalLoad:
 # Kernel#open の利用を禁止する
 #   - File.open / IO.popen などを利用すること
 #
-#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_security/#securityopen
+#   RuboCop Docs: https://docs.rubocop.org/rubocop/cops_security.html#securityopen
 #
 Security/Open:
   Enabled: true
@@ -530,7 +530,7 @@ Security/Open:
 # YAML.load (Psych.load) の利用を禁止する
 #   - YAML.safe_load を利用すること
 #
-#   RuboCop Docs: https://docs.rubocop.org/en/stable/cops_security/#securityyamlload
+#   RuboCop Docs: https://docs.rubocop.org/rubocop/cops_security.html#securityyamlload
 #
 Security/YAMLLoad:
   Enabled: true
