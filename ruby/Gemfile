@@ -3,7 +3,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
 
-gem 'rubocop', '~> 0.93', require: false
+gem 'rubocop', '~> 1.17', require: false
 gem 'rubocop-performance', require: false
 gem 'rubocop-rails', require: false
 gem 'rubocop-rspec', require: false
