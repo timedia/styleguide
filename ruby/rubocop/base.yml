@@ -231,7 +231,7 @@ Metrics/AbcSize:
 Metrics/BlockLength:
   Enabled: true
   CountComments: false
-  ExcludedMethods:
+  IgnoredMethods:
     - class_methods
     - concern
     - describe
