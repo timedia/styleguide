@@ -6,3 +6,19 @@ require: rubocop-rspec
 ########################################
 # RSpec Cops: TODO
 ########################################
+
+# context は When や With などではじめる
+#   - context を日本語で書くことを考慮し、無効化する
+#
+#   RuboCop Docs: https://docs.rubocop.org/rubocop-rspec/cops_rspec.html#rspeccontextwording
+#
+RSpec/ContextWording:
+  Enabled: false
+
+# subject には明示的に名前をつける
+#   - 無名の subject を定義することを許可する
+#
+#   RuboCop Docs: https://docs.rubocop.org/rubocop-rspec/cops_rspec.html#rspecnamedsubject
+#
+RSpec/NamedSubject:
+  Enabled: false
