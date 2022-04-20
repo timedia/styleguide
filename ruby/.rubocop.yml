@@ -1,6 +1,6 @@
 # RuboCop configuration file for actions
 
 inherit_from:
-  - rubocop/base.yml
-  - rubocop/rails.yml
-  - rubocop/rspec.yml
+  - rubocop/config/base.yml
+  - rubocop/config/rails.yml
+  - rubocop/config/rspec.yml
