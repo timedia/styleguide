@@ -4,3 +4,6 @@ inherit_from:
   - rubocop/config/base.yml
   - rubocop/config/rails.yml
   - rubocop/config/rspec.yml
+
+AllCops:
+  TargetRubyVersion: 2.7
