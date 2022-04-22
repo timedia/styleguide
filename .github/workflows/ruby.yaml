@@ -25,7 +25,7 @@ jobs:
           ruby-version: 2.7.x
 
       - name: Fetch bundler cache
-        uses: actions/cache@v1
+        uses: actions/cache@v3
         with:
           path: /usr/local/bundle
           key: ${{ runner.os }}-bundler-${{ hashFiles('**/Gemfile.lock') }}
