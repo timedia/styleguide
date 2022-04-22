@@ -4,9 +4,9 @@
 - RuboCop
 
 ### 設定ファイルのバリエーション
-- [Base](./rubocop/base.yml)
-- [Rails](./rubocop/rails.yml)
-- [RSpec](./rubocop/rspec.yml)
+- [Base](./rubocop/config/base.yml)
+- [Rails](./rubocop/config/rails.yml)
+- [RSpec](./rubocop/config/rspec.yml)
 
 ## 使い方
 ### 1. 必要なファイルを、プロジェクトのルートディレクトリに作成する
@@ -15,26 +15,22 @@
   # frozen_string_literal: true
 
   source 'https://rubygems.org'
+  git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
 
   group :development, :test do
-    gem 'rubocop', '~> 0.83', require: false
-    gem 'rubocop-performance', require: false
-    gem 'rubocop-rails', require: false # Rails プロジェクトのみ
-    gem 'rubocop-rspec', require: false # テストに RSpec を利用するプロジェクトのみ
+    github 'timedia/styleguide', glob: 'ruby/**/*.gemspec' do
+      gem 'rubocop-config-timedia', require: false
+    end
   end
-  ```
-- .gitignore
-  ```gitignore
-  .rubocop-https-*
   ```
 - .rubocop.yml
   - Rails プロジェクトの場合
     ```yaml
-    inherit_from:
-      - https://raw.githubusercontent.com/timedia/styleguide/master/ruby/rubocop/base.yml
-      - https://raw.githubusercontent.com/timedia/styleguide/master/ruby/rubocop/rails.yml
-      # 以下は RSpec 利用時のみ
-      - https://raw.githubusercontent.com/timedia/styleguide/master/ruby/rubocop/rspec.yml
+    inherit_gem:
+      rubocop-config-timedia:
+        - config/base.yml
+        - config/rails.yml
+        - config/rspec.yml # RSpec 利用時のみ
 
     AllCops:
       TargetRubyVersion: 2.7
@@ -50,10 +46,10 @@
     ```
   - Rails を使っていないプロジェクトの場合
     ```yaml
-    inherit_from:
-      - https://raw.githubusercontent.com/timedia/styleguide/master/ruby/rubocop/base.yml
-      # 以下は RSpec 利用時のみ
-      - https://raw.githubusercontent.com/timedia/styleguide/master/ruby/rubocop/rspec.yml
+    inherit_gem:
+      rubocop-config-timedia:
+        - config/base.yml
+        - config/rspec.yml # RSpec 利用時のみ
 
     AllCops:
       TargetRubyVersion: 2.7
