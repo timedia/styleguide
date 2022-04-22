@@ -3,11 +3,13 @@ name: Check .rubocop.yml for ruby
 on:
   pull_request:
     paths:
+      - .github/workflows/ruby.yaml
       - ruby/**
   push:
     branches:
       - master
     paths:
+      - .github/workflows/ruby.yaml
       - ruby/**
 
 jobs:
