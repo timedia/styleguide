@@ -304,14 +304,14 @@ Metrics/ParameterLists:
   CountKeywordArgs: true
   Max: 4
 
-# 見た目の複雑さ？スコアの最大は7とする
+# 見た目の複雑さ？スコアの最大は8とする
 #   - RuboCop のデフォルトに従う
 #
 #   RuboCop Docs: https://docs.rubocop.org/rubocop/cops_metrics.html#metricsperceivedcomplexity
 #
 Metrics/PerceivedComplexity:
   Enabled: true
-  Max: 7
+  Max: 8
 
 
 ########################################
