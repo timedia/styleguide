@@ -7,7 +7,6 @@ gemspec path: './rubocop'
 # NOTE: 新しい Cop の定義を yaml に追加した際に CI が落ちた場合
 #   * rubocop/rubocop-config-timedia.gemspec の runtime_dependency の最低バージョンを上げてください
 #   * それに合わせて↓ のバージョンも上げてください
-#   * `bundle update` を実行して Gemfile.lock を更新してください
 #
 #   e.g. RuboCop 1.30.0 で追加された Cop のデフォルトを設定したい＆現在の RuboCop の最低バージョンが 1.27.0 である
 #     * rubocop-config-timedia.gemspec
