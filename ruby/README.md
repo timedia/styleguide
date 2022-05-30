@@ -64,3 +64,8 @@
 bundle install
 bundle exec rubocop
 ```
+
+## Tips
+### 未定義の Cop が読み込めず、RuboCop の実行に失敗してしまう
+1. `bundle update rubocop` して、RuboCop のバージョンを上げてください
+2. （解決しない/できない場合）RuboCop の実行時に `--ignore-unrecognized-cops` オプションを指定してください
