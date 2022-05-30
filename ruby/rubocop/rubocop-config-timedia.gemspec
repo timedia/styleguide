@@ -13,7 +13,7 @@ Gem::Specification.new do |spec|
 
   spec.files = Dir['config/*.yml']
 
-  spec.add_runtime_dependency 'rubocop', '>= 1.27.0'
+  spec.add_runtime_dependency 'rubocop', '>= 1.30.0'
   spec.add_runtime_dependency 'rubocop-performance', '>= 1.13.0'
   spec.add_runtime_dependency 'rubocop-rails', '>= 2.14.0'
   spec.add_runtime_dependency 'rubocop-rspec', '>= 2.10.0'
