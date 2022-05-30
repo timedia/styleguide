@@ -20,20 +20,12 @@ jobs:
       - name: Checkout codes
         uses: actions/checkout@v3
       - name: Set up Ruby
-        uses: actions/setup-ruby@v1
+        uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 2.7.x
+          ruby-version: '2.7'
+          bundler-cache: true
+          working-directory: ./ruby
 
-      - name: Fetch bundler cache
-        uses: actions/cache@v3
-        with:
-          path: /usr/local/bundle
-          key: ${{ runner.os }}-bundler-${{ hashFiles('**/Gemfile.lock') }}
-          restore-keys: ${{ runner.os }}-bundler-
-
-      - name: Run bundle install
-        run: gem install bundler && bundle install
-        working-directory: ./ruby
       - name: Run Rubocop
         run: bundle exec rubocop
         working-directory: ./ruby
