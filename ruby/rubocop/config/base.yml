@@ -260,14 +260,18 @@ Metrics/ClassLength:
   CountComments: false
   Max: 100
 
-# メソッドの循環的複雑度の最大は6とする
-#   - RuboCop のデフォルトに従う
+# メソッドの循環的複雑度の最大は 8 とする
+#   - 循環的複雑度とは
+#     - 簡単には分岐数
+#     - https://ja.wikipedia.org/wiki/%E5%BE%AA%E7%92%B0%E7%9A%84%E8%A4%87%E9%9B%91%E5%BA%A6
+#   - 人間が読む上では事実上分岐ではない map などの高階関数もカウントされるため
+#     デフォルトの 6 だと直感に反する指摘が入ることが多い
 #
 #   RuboCop Docs: https://docs.rubocop.org/rubocop/cops_metrics.html#metricscyclomaticcomplexity
 #
 Metrics/CyclomaticComplexity:
   Enabled: true
-  Max: 6
+  Max: 8
 
 # メソッドの行数は10行までとする
 #   - RuboCop のデフォルトに従う
