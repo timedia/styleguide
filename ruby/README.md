@@ -4,6 +4,7 @@
 - RuboCop
 
 ### 設定ファイルのバリエーション
+#### RuboCop
 - [Base](./rubocop/config/base.yml)
 - [Rails](./rubocop/config/rails.yml)
 - [RSpec](./rubocop/config/rspec.yml)
