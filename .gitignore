@@ -1,1 +1,4 @@
+ecmascript/**/node_modules
+ecmascript/package-lock.json
+ecmascript/yarn.lock
 ruby/Gemfile.lock
