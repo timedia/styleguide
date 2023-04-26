@@ -232,14 +232,11 @@ Metrics/BlockLength:
   Enabled: true
   CountComments: false
   AllowedMethods:
-    - Enabled
-    - CountComments
-    - Max
-    - CountAsOne
-    - AllowedMethods
-    - AllowedPatterns
-    - Exclude
-    - inherit_mode
+    - class_methods
+    - concern
+    - describe
+    - included
+    - refine
   Max: 25
 
 # Block のネストは最大3段までとする
