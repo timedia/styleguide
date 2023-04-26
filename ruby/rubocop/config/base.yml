@@ -231,12 +231,15 @@ Metrics/AbcSize:
 Metrics/BlockLength:
   Enabled: true
   CountComments: false
-  IgnoredMethods:
-    - class_methods
-    - concern
-    - describe
-    - included
-    - refine
+  AllowedMethods:
+    - Enabled
+    - CountComments
+    - Max
+    - CountAsOne
+    - AllowedMethods
+    - AllowedPatterns
+    - Exclude
+    - inherit_mode
   Max: 25
 
 # Block のネストは最大3段までとする
