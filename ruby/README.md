@@ -31,6 +31,7 @@
         - config/base.yml
         - config/rails.yml
         - config/rspec.yml # RSpec 利用時のみ
+        - config/factory_bot.yml # FactoryBot 利用時のみ
 
     AllCops:
       TargetRubyVersion: 2.7
@@ -50,6 +51,7 @@
       rubocop-config-timedia:
         - config/base.yml
         - config/rspec.yml # RSpec 利用時のみ
+        - config/factory_bot.yml # FactoryBot 利用時のみ
 
     AllCops:
       TargetRubyVersion: 2.7
