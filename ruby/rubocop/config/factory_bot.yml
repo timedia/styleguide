@@ -1,0 +1,8 @@
+# RuboCop FactoryBot の設定ファイル
+# 通常、基本設定ファイル (base.yml) と同時に利用する
+
+require: rubocop-factory_bot
+
+########################################
+# FactoryBot Cops: TODO
+########################################

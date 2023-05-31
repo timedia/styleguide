@@ -3,6 +3,7 @@
 inherit_gem:
   rubocop-config-timedia:
     - config/base.yml
+    - config/factory_bot.yml
     - config/rails.yml
     - config/rspec.yml
 
