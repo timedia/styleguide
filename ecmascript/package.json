@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "@timedia/eslint-config": "*",
+    "eslint": "^8.17.0"
+  }
+}

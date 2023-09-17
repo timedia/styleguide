@@ -1,5 +1,9 @@
+ecmascript:
+  - ecmascript/**
+
 ruby:
   - ruby/**
 
 others:
+  - '!ecmascript/**'
   - '!ruby/**'

@@ -1,3 +1,4 @@
 * @timedia/styleguide
 
+/ecmascript @timedia/styleguide-ecmascript
 /ruby @timedia/styleguide-ruby
