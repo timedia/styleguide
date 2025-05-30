@@ -1,6 +1,7 @@
 # RuboCop の基本設定ファイル
 
-require: rubocop-performance
+plugins:
+  - rubocop-performance
 
 ########################################
 # Bundler Cops: Gemfile 用の設定
