@@ -23,3 +23,11 @@ RSpec/ContextWording:
 #
 RSpec/NamedSubject:
   Enabled: false
+
+# ひとつの example に配置できる expectation の数に上限を設ける
+#   - 10件まで expectation を書けるようにする
+#
+#   RuboCop Docs: https://docs.rubocop.org/rubocop-rspec/cops_rspec.html#rspecmultipleexpectations
+#
+RSpec/MultipleExpectations:
+  Max: 10
