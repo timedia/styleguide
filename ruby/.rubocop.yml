@@ -8,4 +8,8 @@ inherit_gem:
     - config/rspec.yml
 
 AllCops:
-  TargetRubyVersion: 2.7
+  TargetRubyVersion: 3.2
+
+Gemspec/RequiredRubyVersion:
+  Exclude:
+    - rubocop/rubocop-config-timedia.gemspec
