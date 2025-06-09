@@ -9,3 +9,7 @@ inherit_gem:
 
 AllCops:
   TargetRubyVersion: 3.2
+
+Gemspec/RequiredRubyVersion:
+  Exclude:
+    - rubocop/rubocop-config-timedia.gemspec
